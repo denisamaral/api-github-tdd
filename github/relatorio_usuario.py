@@ -30,7 +30,8 @@ class Relatorio:
         # Atualizo o arquivo do relatório com os dados encontrados dos repositórios do usuário solicitado
         Relatorio.escreve_dados_repositorios_usuario_relatorio(self, usuario, repositorios)
 
-        print(f"Relatório '{usuario}.txt' criado com sucesso! \n")
+        print(f"Relatório '{usuario}.txt' criado com sucesso! \n ")
+        print(f"============================================= \n ")
 
         # Finalizo a aplicação
         Relatorio.finalizar_app(self)
@@ -102,10 +103,11 @@ class Relatorio:
 
                 mensagem = dados_usuario["message"]
                 print(f"{mensagem} \n")
+                print(f"=============================================")
                 Relatorio.finalizar_app(self)
 
             else:
-                print(f"Usuário '{usuario}' não existe! \n")
+                print(f"Usuário '{usuario}' não existe!")
 
             return False
 
@@ -133,6 +135,7 @@ class Relatorio:
 
         if nova_pesquisa == 'sim':
 
+            print(f"\n=============================================\n")
             # Reinício do processo de busca da aplicação
             Relatorio.relatorio_usuario(self)
 
