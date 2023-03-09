@@ -16,7 +16,7 @@ class Relatorio:
         dados_usuario = Relatorio.buscar_dados_usuario(self, usuario)
 
         if not dados_usuario:
-            Relatorio.relatorio_usuario(self)
+            Relatorio.finalizar_app(self)
             return False
 
         dados_usuario = dados_usuario.json()
