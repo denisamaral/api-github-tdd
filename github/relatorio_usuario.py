@@ -98,7 +98,7 @@ class Relatorio:
 
             dados_usuario = dados_usuario.json()
 
-            if dados_usuario["message"]:
+            if dados_usuario["message"] and dados_usuario["message"] != 'Not Found':
 
                 mensagem = dados_usuario["message"]
                 print(f"{mensagem} \n")
